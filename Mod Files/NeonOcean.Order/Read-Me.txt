@@ -1,0 +1,98 @@
+NeonOcean.Main
+Made by NeonOcean
+
+--General Information--
+	NeonOcean.Order is a standalone mod designed to allow mods to specify the load order of their script paths. It cannot control the 
+	import order of individual scripts though they will be done in normal order. This mod will override  the standard loading mechanism of the 
+	game but it should function the same as the original. This mod cannot change the load order of any scripts loaded before it and they 
+	will load as normal and before most if not all other mods. 
+
+	Please refer to the file license.txt for legal information about this mod.
+	
+	You can find more of my mods here.
+	http://modthesims.info/member.php?u=10084952
+	
+	You can support my work through my Patreon.
+	https://www.patreon.com/NeonOcean
+	
+	The main GitHub repository for this mod can be found at
+	https://github.com/NeonOcean/NeonOcean.Order
+	
+	Source code for this mod is available on GitHub.
+	https://github.com/NeonOcean/NeonOcean.Order_Source
+	
+	You can contact me by email at.
+	NeonOceanCreations@gmail.com
+	
+	All GitHub repositories will be up to date with the public release. You can also find old public versions of my mods and their sources 
+	in the releases section.
+		
+--Installation instructions--
+	Start The Sims 4 and get to the main menu, Press the ESC key and navigate to "Options" and from there to "Other". If it is not already,
+	enable "Enable Custom Content and Mods" and "Script Mods Allowed" then quit the game.
+
+	Go to your document's folder then to the folder "Electronic Arts" to, "The Sims 4" and then "Mods". If your mods folder does not exist
+	create a new one. Copy the contents of the zip file this read-me came in into your mods folder.
+	
+	The installed mod should be functional the next time you start the game. Please do not move any of my mod's files from their intended 
+	position as this is not supported.
+
+--Reporting bugs--
+	Report any bugs you find to this mod's GitHub issues page.
+	https://github.com/NeonOcean/NeonOcean.Order/issues
+	
+	Let the title be prefixed with the mod version you are using and include a description about the problem you are having and how it happened 
+	if you know. Make sure to attach any LastException files and the folder located at "<your documents folder>\Electronic Arts\The Sims 4\NeonOcean" 
+	in an archive file.
+	
+	Alternatively you can send me a private message on my ModTheSims page. You cannot submit any logs through private messaging though.
+	http://modthesims.info/member.php?u=10084952
+
+--Working with this mod (Information for mod creators)--
+	Before doing anything this mod will search for load order information in every file named "NeonOcean.Order-Load-Order.json" 
+	located in the Mods folder.
+
+	The following is an example of a valid load order information file.
+
+	[
+		{
+			"Priority" : -5000,
+			
+			"Paths" : [
+				".\\NeonOcean.Main\\NeonOcean.Main.zip"
+			],
+			
+			"Functions" : [
+				{
+					"Module" : "NeonOcean.Mods",
+					"Function" : "_LoadDebug"
+				}
+			]
+		},
+		{
+			"Priority" : -2500,
+			
+			"Functions" : [
+				{
+					"Module" : "NeonOcean.Mods",
+					"Function" : "_LoadChoreography"
+				}
+			]
+		}
+	]
+
+	The "Priority" value is a float controlling when to import scripts or call functions. All scripts will be imported in order 
+	from lowest value to highest value. It also supports decimals and can be positive or negative infinity. All paths destined 
+	to be imported by default but have no load order information will be imported at priority 0.
+
+	The "Paths" value is a list of strings containing the locations of any paths made to be imported at this priority level. 
+	Any value starting with a period will cause the mod to look for the path from mods folder. Otherwise the mod will look from 
+	the directory it found the load order information in. Any path separators at the beginning of the path before or after any period 
+	will be ignored.
+
+	The "Functions" value is a list of dictionaries containing functions meant the be called after all scripts in the specified paths 
+	are imported.
+
+	Any priority level specified must have a "Paths" or a "Functions" value or it will be ignored.
+
+	Any issues loading the mod will be written to the file at "<Sims 4 user data path>\NeonOcean\Debug\Mods\NeonOcean.Order\<Order start time>\Log.xml>"
