@@ -1,4 +1,4 @@
-NeonOcean.Main
+NeonOcean.Order
 Made by NeonOcean
 
 --General Information--
@@ -10,7 +10,7 @@ Made by NeonOcean
 	Please refer to the file license.txt for legal information about this mod.
 	
 	You can find more of my mods here.
-	http://modthesims.info/member.php?u=10084952
+	https://NeonOceanCreations.blogspot.com/
 	
 	You can support my work through my Patreon.
 	https://www.patreon.com/NeonOcean
@@ -28,12 +28,12 @@ Made by NeonOcean
 	in the releases section.
 		
 --Installation instructions--
-	Start The Sims 4 and get to the main menu, Press the ESC key and navigate to "Options" and from there to "Other". If it is not already,
+	Start The Sims 4 and get to the main menu, Press the ESC key and navigate to "Options" and from there to "Other". If it is not already, 
 	enable "Enable Custom Content and Mods" and "Script Mods Allowed" then quit the game.
 
-	Go to your document's folder then to the folder "Electronic Arts" to, "The Sims 4" and then "Mods". If your mods folder does not exist
-	create a new one. Copy the contents of the zip file this read-me came in into your mods folder.
-	
+	Go to your document's folder then to the folder "Electronic Arts" to, "The Sims 4" and then "Mods". If your mods folder does not exist 
+	create a new one. Copy the contents of the mod's download file into your mods folder.
+
 	The installed mod should be functional the next time you start the game. Please do not move any of my mod's files from their intended 
 	position as this is not supported.
 
@@ -44,9 +44,6 @@ Made by NeonOcean
 	Let the title be prefixed with the mod version you are using and include a description about the problem you are having and how it happened 
 	if you know. Make sure to attach any LastException files and the folder located at "<your documents folder>\Electronic Arts\The Sims 4\NeonOcean" 
 	in an archive file.
-	
-	Alternatively you can send me a private message on my ModTheSims page. You cannot submit any logs through private messaging though.
-	http://modthesims.info/member.php?u=10084952
 
 --Working with this mod (Information for mod creators)--
 	Before doing anything this mod will search for load order information in every file named "NeonOcean.Order-Load-Order.json" 
